@@ -8,6 +8,25 @@ const sum = (...args) => {
     return total;
 }
 
-// display the returned value of the above functions
-console.log(add(2, 5));
-console.log(sum(10, 5, 6));
+const mul = (...args) => {
+    let product = 1;
+    for (const arg of args) {
+        product *= arg;
+    }
+    return product;
+}
+
+const div = (a, b) => {
+    if (b === 0) {
+        throw new Error('Division by zero');
+    }
+    return a / b;
+
+}
+
+module.exports = {
+    add,
+    sum,
+    mul,
+    div
+}
